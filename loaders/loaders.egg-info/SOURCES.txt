@@ -1,7 +1,0 @@
-dataset.py
-pyproject.toml
-loaders.egg-info/PKG-INFO
-loaders.egg-info/SOURCES.txt
-loaders.egg-info/dependency_links.txt
-loaders.egg-info/requires.txt
-loaders.egg-info/top_level.txt
