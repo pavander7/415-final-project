@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: pauls_data_loaders
+Version: 1.0
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12.5
+Requires-Dist: pandas

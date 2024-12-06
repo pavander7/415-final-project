@@ -1,0 +1,9 @@
+README.md
+setup.py
+loader_functions/__init__.py
+loader_functions/dataset.py
+pauls_data_loaders.egg-info/PKG-INFO
+pauls_data_loaders.egg-info/SOURCES.txt
+pauls_data_loaders.egg-info/dependency_links.txt
+pauls_data_loaders.egg-info/requires.txt
+pauls_data_loaders.egg-info/top_level.txt
