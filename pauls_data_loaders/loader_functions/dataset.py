@@ -241,15 +241,15 @@ def load_weights():
     weights_long['datetime'] = weights_long['date'] + pd.to_timedelta(weights_long['hour'] - 1, unit='h')
 
     # change dtype on 'load'
-    weights_long['load'] = (
-        weights_long['load']
+    weights_long['weight'] = (
+        weights_long['weight']
         .replace(',', '', regex=True)                             # remove commas
         .apply(lambda x: x.strip() if isinstance(x, str) else x)  # strip any whitespace
         .apply(pd.to_numeric, errors='coerce')                    # convert to numeric (keeping NaNs)
     )
     
     # drop extra columns
-    weights_long = weights_long[['zone_id', 'datetime', 'load']]
+    weights_long = weights_long[['zone_id', 'datetime', 'weight']]
 
     # set datetime as index
     weights_long.set_index('datetime', inplace=True)
@@ -257,7 +257,7 @@ def load_weights():
     # step 4: repivot
 
     # pivot s.t. there is one column per zone
-    weights_grouped = weights_long.pivot(columns='zone_id', values='load')
+    weights_grouped = weights_long.pivot(columns='zone_id', values='weight')
 
     # rename columns for clarity
     weights_grouped = weights_grouped.rename(columns=lambda col: f"zone_{col}" if col != 'datetime' else col)
